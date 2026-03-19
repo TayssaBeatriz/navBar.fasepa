@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="containerSetor">
+  <div id="presidente" class="conteudo-item active">
+    
+    <h3>Presidente</h3>
+    <h2>Nome</h2>
+    <img src="https://via.placeholder.com/300">
+    <p>Descrição do presidente</p>
+  </div>
+
+  <div id="outro1" class="conteudo-item" style="display:none;">
+    <h4>Presidente</h4>
+    <h3>Nome</h3>
+    <img src="https://via.placeholder.com/300">
+    <p>Descrição do presidente</p>
+  </div>
+
+  <div id="outro2" class="conteudo-item" style="display:none;">
+    <h3>Presidente</h3>
+    <h2>Nome</h2>
+    <img src="https://via.placeholder.com/300">
+    <p>Descrição do presidente</p>
+  </div>
+</div>
+
+<style>
+.containerSetor img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+</style>
+
+<script>
+jQuery(window).on('elementor/frontend/init', function() {
+
+  const tabs = document.querySelectorAll('.meu-acordeon .elementor-tab-title');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', function() {
+
+      // Esconde todos
+      document.querySelectorAll('.conteudo-item').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // Mostra o correspondente
+      const ativo = document.getElementById('conteudo-' + index);
+      if (ativo) {
+        ativo.style.display = 'block';
+      }
+
+    });
+  });
+
+});
+</script>
+</body>
+</html>

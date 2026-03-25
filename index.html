@@ -1,66 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="containerSetor">
-  <div id="presidente" class="conteudo-item active">
-    
-    <h3>Presidente</h3>
-    <h2>Nome</h2>
-    <img src="https://via.placeholder.com/300">
-    <p>Descrição do presidente</p>
-  </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<style> 
+ul{
+  margin: 0;
+  padding: 0;
 
-  <div id="outro1" class="conteudo-item" style="display:none;">
-    <h4>Presidente</h4>
-    <h3>Nome</h3>
-    <img src="https://via.placeholder.com/300">
-    <p>Descrição do presidente</p>
-  </div>
+}
+.item { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 2% 3%; 
+} 
 
-  <div id="outro2" class="conteudo-item" style="display:none;">
-    <h3>Presidente</h3>
-    <h2>Nome</h2>
-    <img src="https://via.placeholder.com/300">
-    <p>Descrição do presidente</p>
-  </div>
-</div>
+.item:hover { 
+  background-color: #0071C8; 
+  cursor: pointer; 
+  color: white;
+}
 
-<style>
-.containerSetor img {
+#contatos {
+  display: none;
+}
+#img{
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
+  height: auto;
+}
+.containerSetorDados{
+  width: 50%;
+}
+#nome{
+    font-size: 18px;
+    font-weight: 700;
+    color:#54595F;
+}
+.titulo{
+  padding: 2% 3%;
+}
+.titulo:hover{
+  background-color: #0071C8; 
+  cursor: pointer; 
+  color: white;
+
+}
+.subItens{
+  background-color: white;
+  color: black;
+  display: none;
+  
+}
+#setores{
+  display: flex;
+  gap: 1rem;
+
 }
 </style>
+</head>
+<body>
+  <section id="setores">
+    <div class="containerSetorDados">
+      <h3 id="setor">setor</h3>
+      <h3 id="cargo">cargo</h3>
+      <h2 id="nome">nome</h2>
+      <div id="contatos">
+        <ul>
+          <li class="elementor-icon-list-text">telefone</li>
+          <li class="elementor-icon-list-text">email</li>
+          <li class="elementor-icon-list-text">localização</li>
+        </ul>
+      </div>
+      
+      <img id="img"src="" alt="">
+      <p id="descricao">descrição</p>
+    </div>
+    <div class="opcoes">
+      <ul>
 
+        <li class="titulo">presidente
+          
+        </li>
+        <li class="titulo" data-diretoria="presidencia" data-cargo="presidente">Presidencia
+           <div class="subItens">
+            <ul>
+ 	<li class="item setores" data-diretoria="presidencia" data-cargo="secretaria">Secretaria da DAF</li>
+        </li>
+        </ul>
+      </div>  
+
+        <li class="titulo">diretoria adiministrativa e financeira-DAF
+          <div class="subItens">
+            <ul>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="Diretor">Diretoria da DAF</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="secretaria">Secretaria da DAF</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="coordenadora">Coordenadora Administrativa-DAF</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gcon">Gerencia de contratos e convenios-GCON</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gtran">Gerencia de transportes-GTRAN</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="ginfo">Gerencia de informatica-GINFO</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="geremp">Gerencia de enegenharia e manutençao predial-GEREMP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gserv">Gerencia de serviços</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gmap">Gerencia de material e matrimonio-GMAP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="galmox">Gerencia de almoxarifado-GALMOX</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="cofin">Gerencia de financeiro-COFIN</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="cfino">Coordenadoria de execuçao e orçamentaria-CFINO</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gcasp">Gerencia de contabilidade e aplicada no setor publico-GCASP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gpc">Gerencia e prestaçao de contas-GPC</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="cogep">Coordenadoria de gestao de pessoas-COGEP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gap">Gerencia de administraçao depessoas-GAP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gpp">Gerencia de pagamento de pessoas-GPP</li>
+ 	<li class="item setores" data-diretoria="daf" data-cargo="gdp">Gerencia de desenvolvimento pessoal-GDP</li>
+</ul>
+            
+            
+          </div>
+        </li>
+        <li class="titulo">DSS
+          <div class="subItens">
+  
+ <ul>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="Diretor">Diretoria da DDPS</li>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="assessoria">Acessoria Tecnica-DDPS</li>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="cseam">Coordenadoria socioeducativa de apoio aos municipios-CSEAM</li>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="case">Coordenadoria de atendimento Docioeducativo-CASE</li>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="restaurativas">Gerencia de praticas restaurativas Socioeducativas</li>
+ 	<li class="item setores" data-diretoria="ddps" data-cargo="central_vagas">Gerencia de Central de Vagas</li>
+</ul>
+          </div>
+        </li>
+        <li class="titulo">UASE
+          <div class="subItens">
+            <ul>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="sas">Serviço de atendimento socioeducativo - SAS</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="ipmb">UASE de atenção provisória masculina Belém - UASE/IPMB</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="ipfa">UASE de internação provisória feminina Ananindeua - UASE/IPFA</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="ipms">UASE de internação provisória masculina Santarém - UASE/IPMS</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="ipmm">UASE de internação provisória masculina Marabá - UASE/IPMM</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="smb1">UASE de semiliberdade masculina Belém I - UASE/SMB I</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="smb2">UASE de semiliberdade masculina Belém II - UASE/SMB II</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="sms">UASE de semiliberdade masculina Santarém - UASE/SMS</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="sfb">UASE de semiliberdade feminina Belém - UASE/SFB</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="imb1">UASE de internação masculina Belém - UASE/IMB I</li>
+ 	<li class="item setores" data-diretoria="uase" data-cargo="ima1">UASE de internação masculina Ananindeua I - UASE/IMA I</li>
+</ul>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 <script>
-jQuery(window).on('elementor/frontend/init', function() {
 
-  const tabs = document.querySelectorAll('.meu-acordeon .elementor-tab-title');
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', function() {
+  const dados = {
 
-      // Esconde todos
-      document.querySelectorAll('.conteudo-item').forEach(el => {
-        el.style.display = 'none';
-      });
-
-      // Mostra o correspondente
-      const ativo = document.getElementById('conteudo-' + index);
-      if (ativo) {
-        ativo.style.display = 'block';
+    presidencia: {
+      presidente: { 
+        nome: "Carlos Alberto de Andrade Rodrigues Junior",
+        cargo: "Presidente",
+        img: "img/Frame 23.png",
+        telefone: "(91) 3210-3308",
+        email: " fasepa.gabinete@gmail.com",
+        localizacao: "Rua dos Tamoios , 1592 - Batista Campos-CEP: 66030-373"
+      },
+       chefeGabinete: { 
+        nome: "",
+        cargo: "Chefe de Gabinete",
+        img: "img/Frame 23.png",
+        telefone: "",
+        email: "",
+        localizacao: ""
       }
+    },
 
-    });
+    daf: {
+        Diretor:{ nome: "Darley Antonio Martins Barros", cargo:"Diretor Administrativo e financeiro", setor:"Diretoria de Administrativa e Finaceira DAF",img:"../img/Frame 23.png", telefone:"", email:"daf@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 2º Andar " },
+      secretaria: { nome: " Maria do Socorro Da Silva Trindade", cargo:"Secretária", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"99999999", email:"meuEmail@gnail.com", localizacao:"rua dos tamoios" },
+      coordenadora: { nome: "", cargo:"", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"", localizacao:"" },
+      gcon: { nome: "", cargo:"Gerência de Contratos e Convênio", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"gcon@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 2º Andar " },
+      gtran: { nome: "TATIANE CRISTINA PINHEIRO DE OLIVEIRA", cargo:"Gerência de Transportes", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"gtran@fasepa.pa.gov.br", localizacao:"Rod. Augusto Montenegro, KM 09, s/n, Parque Guajará, Belém-PA - CEP: 66821-000" },
+      ginfo: { nome: "CARLOS WILLIAMES LIMA DE SOUZA", cargo:"Gerência de Informática", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"ginfo@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Principal - Térreo" },
+      geremp: { nome: "RYAN RICARDO NABOR DE OLIVEIRA", cargo:"Gerência de Engenharia de Manutenção Predial", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"geremp@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - Térreo" },
+      gserv: { nome: "", cargo:"", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"", localizacao:"" },
+      gmap: { nome: "ANAGILDA SANTOS COELHO", cargo:"Gerência de Material e Patrimônio", setor:"", telefone:"", email:"gmap@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 2º Andar " },
+      galmox: { nome: "CINTHIA LEITE MEDEIROS DE CARVALHO RANGEL", cargo:"Gerência de Almoxarifado", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"galmox@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 1º Andar " },
+      cofin: { nome: "FABIO ANDREY SANTOS DA SILVA", cargo:"Coordenadoria Financeira", setor:"", telefone:"", email:"cofin@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - Térreo" },
+      cfino: { nome: "SHIRLEY GONCALVES DE OLIVEIRA SILVA", cargo:"Coordenadoria de Execução Orçamentária", setor:"", telefone:"", email:"cfino@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - Térreo" },
+      gcasp: { nome: "", cargo:"Gerência de Contabilidade Aplicada ao Setor Público", setor:"", telefone:"", email:"gcasp@fasepa.pa.gov.br", localizacao:"" },
+      gpc: { nome: "ANA LÚCIA DO CARMO", cargo:"Gerência de Prestação de Contas", setor:"", telefone:"", email:"gpc@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - Térreo" },
+      cogep: { nome: "JOSÉ ASSAYAG NETO", cargo:"Coordenadoria de Gestão de Pessoas ", setor:"", telefone:"", email:"cogep@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Principal - 1º Andar " },
+      gap: { nome: "MÁRCIA CHAVES SOUZA", cargo:"Gerência de Administração de Pessoal", setor:"", telefone:"", email:"gap@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Principal - 1º Andar " },
+      gpp: { nome: "VIRGÍNIA DA SILVA PARENTE", cargo:"Gerência de Pagamento de Pessoal", setor:"Diretoria de Administrativa e Finaceira DAF", telefone:"", email:"gap@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Principal - 1º Andar" },
+      gdp: { nome: "MARCELA DE PAIVA REIS", cargo:"Gerência de Desenvolvimento de Pessoas", setor:"", telefone:"", email:"gdp@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Principal - 1º Andar " }
+    },
+    ddps:{
+     Diretor:{ nome:"Andrey Miranda da Silva", cargo:"Diretor", setor:"Diretoria de Desenvolvimento da  politica socioeducativa-DDPS",img:"", telefone:"", email:"", localizacao:"" },
+      secretaria: { nome: "", cargo:"", setor:"", telefone:"", email:"secdaf@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 2º Andar " },
+      cseam: { nome: "", cargo:"", setor:"", telefone:"", email:"", localizacao:"" },
+      case_: { nome: "KATIA SIMONE GOMES PORFIRIO", cargo:"Coordenadoria de Atendimento Socioeducativo", setor:"", telefone:"", email:"case@fasepa.pa.gov.br", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 1º Andar " },
+      restaurativas: { nome: "", setor:"", img:"", telefone:"", email:"", localizacao:"Rua dos Tamoios, nº 1592 - Batista Campos, Belém-PA - CEP: 66.030-373 - Prédio Anexo - 1º Andar " },
+      central_vagas: { nome: "", setor:"Gerência Central de Vagas", img:"", telefone:"", email:"centraldevagas@fasepa.pa.gov.br", localizacao:"" }
+    },
+
+    uase: {
+      sas: { nome: "", cargo:"Gestor", setor:"Serviço de Atendimento Socioeducativo", telefone:"", email:"sas@fasepa.pa.gov.br", localizacao:"Av. Governador José Malcher, nº 1031, São Brás, Belém-PA - CEP: 66.060-232" },
+      ipmb: { nome: "MONICA CELESTE SANTOS CARDOSO", cargo:"Gestor", setor:"UASE de Internação Provisória Masculina Belém", telefone:"", email:"uase.ipmb@fasepa.pa.gov.br", localizacao:"Conj. Arari Bolonha, s/n, Sideral, Belém-PA - CEP: 66.650-520" },
+      ipfa: { nome: "MÁRCIA CRISTINA LEÃO PINHEIRO DOS SANTOS", cargo:"Gestor", setor:"UASE de Internação Provisória Feminina Ananindeua", telefone:"", email:"uase.ipfa@fasepa.pa.gov.br", localizacao:"Conj. Cidade Nova V, Tv. WE 58, nº 842, Coqueiro, Ananindeua-PA - CEP: 67133-410" },
+      ipms: { nome: "SÉRGIO MIGUEL DA SILVA PINHEIRO ", cargo:"gestor", setor:"UASE de Internação Masculina Santarém", telefone:"", email:"", localizacao:"Av. Dr. Sergio Henn, s/n, Aeroporto Velho, Santarém-PA - CEP: 68.020-000" },
+      ipmm: { nome: "FLÁVIO MARQUES DOS SANTOS", cargo:"", setor:"UASE de Internação Masculina Marabá", telefone:"", email:"uase.imm@fasepa.pa.gov.br", localizacao:"Rod. PA 150, Av. Tancredo Neves, s/n, São Félix, Marabá-PA - CEP: 68500-000" },
+      smb1: { nome: "INACYREMA DE ASSUNÇÃO SANTANA COSTA", cargo:"", setor:"UASE de Semiliberdade Masculina Belém I", telefone:"", email:"uase.smb1@fasepa.pa.gov.br", localizacao:"Tv. Itaboraí, nº 359, Icoaraci, Belém-PA - CEP: 66.810-030" },
+      smb2: { nome: "CIBELE NUNES DOS SANTOS", cargo:"", setor:"UASE de Semiliberdade Masculina Belém II", telefone:"", email:"uase.smb2@fasepa.pa.gov.br", localizacao:"Rod. Augusto Montenegro, KM 13, Residencial Fé em Deus, nº 27, Passagem das Flores, nº 24, Águas Negras, Belém-PA - CEP: 66833-325" },
+      sms: { nome: "ROSÂNGELA MARIA COUTO SALES", cargo:"", setor:"UASE de Semiliberdade Masculina Santarém", telefone:"", email:"uase.sms@fasepa.pa.gov.br", localizacao:"Av. Nazaré, nº 149, Centro, Santarém-PA - CEP: 68005-551" },
+      sfb: { nome: "LARISSA DE CARVALHO RODRIGUES SALES", cargo:"", setor:"UASE de Semiliberdade Feminina Belém", telefone:"", email:"uase.sfb@fasepa.pa.gov.br", localizacao:"Rua Manoel Barata, nº 1323, Icoaraci, Belém-PA - CEP: 66812-021" },
+      imb1: { nome: "RIAN CLEBER GOMES DE SOUZA", cargo:"", setor:"UASE de Internação Masculina Benevides", telefone:"", email:"uase.imb@fasepa.pa.gov.br", localizacao:"Rod. BR 16, KM 25, Rod. Augusto Meira, s/n, Colônia N. Sra. do Carmo, Centro, Benevides-PA - CEP: 68.795-000" },
+      ima1: { nome: "ANA PRISCILA BARROSO DA SILVA", cargo:"", setor:"UASE DE Internação Masculina Ananindeua I", telefone:"", email:"uase.ima1@fasepa.pa.gov.br", localizacao:"Rod. BR 16, KM 08, Rua Cavalcante, 738, Centro, Ananindeua-PA - CEP: 67.030-045" }
+    }
+
+  };
+
+
+  const nome = document.getElementById("nome");
+  const foto = document.getElementById("img");
+  const cargoEl = document.getElementById("cargo");
+  const descricao = document.getElementById("descricao");
+  const setor = document.getElementById("setor");
+
+  const itens = document.querySelectorAll(".item");
+  const container = document.querySelector("#contatos");
+  /////////////////////////////////////////////////////////////
+  const titulo = document.querySelectorAll('.titulo')
+  
+  ///////////////////////////////////////////////////////////
+
+ titulo.forEach(e => {
+  e.addEventListener("click", () => {
+    const subItens = e.querySelector(".subItens")
+    
+    if (subItens) {
+      if (subItens.style.display === 'block') {
+        subItens.style.display = 'none'
+      } else {
+        subItens.style.display = 'block'
+      }
+    }
+  })
+})
+  
+  let telefoneEl, emailEl, localizacaoEl;
+
+  if (container) {
+    const itensLista = container.querySelectorAll(".elementor-icon-list-text");
+    telefoneEl = itensLista[0];
+    emailEl = itensLista[1];
+    localizacaoEl = itensLista[2];
+ 
+  }
+
+
+  itens.forEach(item => {
+  
+  item.addEventListener("click", () => {
+
+    const diretoria = item.dataset.diretoria;
+    const cargoKey = item.dataset.cargo;
+
+    const pessoa = dados[diretoria]?.[cargoKey];
+
+    if (!pessoa){
+      nome.textContent = "Informação não encontrada";
+      cargoEl.textContent = "";
+      foto.style.display = "none";
+      descricao.style.display = "none"
+      if (container) container.style.display = "none";
+      return;
+    }
+
+   
+    nome.textContent = pessoa.nome || "";
+    cargoEl.textContent = pessoa.cargo || "";
+    setor.textContent = pessoa.setor || "";
+
+    if (container) {
+      container.style.display = "block";
+
+      telefoneEl.textContent = pessoa.telefone || "";
+      emailEl.textContent = pessoa.email || "";
+      localizacaoEl.textContent = pessoa.localizacao || "";
+    }
+
+    if (cargoKey === "presidente" || cargoKey=== "Diretor") {
+      foto.style.display = "block";
+      descricao.style.display ='block';
+      nome.style.color = "#0071C8";
+      foto.src = pessoa.img || "";
+      setor.style.display = "none"
+    } else {
+      foto.style.display = "none";
+      descricao.style.display ="none"
+      setor.style.display = "block"
+      nome.style.color = "#54595F";
+     
+    }
+
   });
 
-});
+    });
+
 </script>
 </body>
 </html>
+
+
